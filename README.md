@@ -47,129 +47,129 @@
 >
 > **👉 [参与投票](https://cdhx.github.io/LLM-Code-Hot-100)**，用你的面试经历帮助社区校准 Hot 程度！
 
-### 📖 LLM 基础 → [查看](docs/00-llm-basics.md)
+### 📖 LLM 基础 → [查看](docs/00-llm-basics.md) · [PDF](pdfs/00-llm-basics.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 1 | 梯度与反向传播 | 🔥🔥 | ⭐⭐ | 链式法则手推，深度学习根基 |
-| 2 | 线性回归 | 🔥 | ⭐ | `y = Wx + b`，最简单的模型 |
-| 3 | 逻辑回归 | 🔥🔥 | ⭐⭐ | `sigmoid(Wx + b)`，二分类基础 |
-| 4 | Softmax 回归 | 🔥 | ⭐⭐ | 多分类，LLM 输出层 |
-| 5 | MLP 多层感知机 | 🔥🔥 | ⭐⭐ | 万能近似器，FFN 的基础 |
-| 6 | 激活函数 | 🔥🔥 | ⭐ | ReLU/GELU/SiLU 及其梯度 |
+| 1 | [梯度与反向传播](docs/00-llm-basics.md#梯度与反向传播) | 🔥🔥 | ⭐⭐ | 链式法则手推，深度学习根基 |
+| 2 | [线性回归](docs/00-llm-basics.md#线性回归) | 🔥 | ⭐ | `y = Wx + b`，最简单的模型 |
+| 3 | [逻辑回归](docs/00-llm-basics.md#逻辑回归) | 🔥🔥 | ⭐⭐ | `sigmoid(Wx + b)`，二分类基础 |
+| 4 | [Softmax 回归](docs/00-llm-basics.md#softmax-回归) | 🔥 | ⭐⭐ | 多分类，LLM 输出层 |
+| 5 | [MLP 多层感知机](docs/00-llm-basics.md#mlp-多层感知机) | 🔥🔥 | ⭐⭐ | 万能近似器，FFN 的基础 |
+| 6 | [激活函数](docs/00-llm-basics.md#激活函数) | 🔥🔥 | ⭐ | ReLU/GELU/SiLU 及其梯度 |
 
-### 🧠 Attention 机制 → [查看](docs/01-attention.md)
-
-| # | 题目 | Hot | 难度 | 一句话 |
-|:---:|:---|:---:|:---:|:---|
-| 7 | Scaled Dot-Product Attention | 🔥🔥🔥 | ⭐⭐⭐ | `softmax(QK^T/√d)V`，一切的基础 |
-| 8 | Multi-Head Attention | 🔥🔥🔥 | ⭐⭐⭐⭐ | 多头并行，不同子空间的注意力 |
-| 9 | Causal Mask | 🔥🔥🔥 | ⭐⭐ | 下三角掩码，防止看到未来 |
-| 10 | Grouped Query Attention (GQA) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Q头数 > KV头数，LLaMA2 主流 |
-| 11 | Multi-Query Attention (MQA) | 🔥🔥 | ⭐⭐⭐ | 所有 Q 共享一组 KV |
-| 12 | Flash Attention | 🔥🔥 | ⭐⭐⭐⭐⭐ | 分块计算，IO 感知，内存 O(N) |
-| 13 | KV Cache | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，避免重复计算 |
-| 14 | Cross Attention | 🔥 | ⭐⭐⭐ | Q 来自 decoder，KV 来自 encoder |
-
-### 📏 归一化层 → [查看](docs/02-normalization.md)
+### 🧠 Attention 机制 → [查看](docs/01-attention.md) · [PDF](pdfs/01-attention.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 15 | Layer Normalization | 🔥🔥🔥 | ⭐⭐ | 沿特征维度归一化，Transformer 标配 |
-| 16 | RMS Normalization | 🔥🔥🔥 | ⭐⭐ | 去掉均值只除 RMS，LLaMA 用 |
-| 17 | Batch Normalization | 🔥 | ⭐⭐ | 沿 batch 维度归一化，CNN 常用 |
-| 18 | Pre-Norm vs Post-Norm | 🔥🔥 | ⭐ | Pre-Norm 训练稳定，现代 LLM 主流 |
+| 7 | [Scaled Dot-Product Attention](docs/01-attention.md#scaled-dot-product-attention) | 🔥🔥🔥 | ⭐⭐⭐ | `softmax(QK^T/√d)V`，一切的基础 |
+| 8 | [Multi-Head Attention](docs/01-attention.md#multi-head-attention) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 多头并行，不同子空间的注意力 |
+| 9 | [Causal Mask](docs/01-attention.md#causal-mask) | 🔥🔥🔥 | ⭐⭐ | 下三角掩码，防止看到未来 |
+| 10 | [Grouped Query Attention (GQA)](docs/01-attention.md#grouped-query-attention-gqa) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Q头数 > KV头数，LLaMA2 主流 |
+| 11 | [Multi-Query Attention (MQA)](docs/01-attention.md#multi-query-attention-mqa) | 🔥🔥 | ⭐⭐⭐ | 所有 Q 共享一组 KV |
+| 12 | [Flash Attention](docs/01-attention.md#flash-attention-原理) | 🔥🔥 | ⭐⭐⭐⭐⭐ | 分块计算，IO 感知，内存 O(N) |
+| 13 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，避免重复计算 |
+| 14 | [Cross Attention](docs/01-attention.md#cross-attention) | 🔥 | ⭐⭐⭐ | Q 来自 decoder，KV 来自 encoder |
 
-### 📍 位置编码 → [查看](docs/03-position-encoding.md)
-
-| # | 题目 | Hot | 难度 | 一句话 |
-|:---:|:---|:---:|:---:|:---|
-| 19 | Sinusoidal PE | 🔥 | ⭐⭐ | sin/cos 固定编码，原始 Transformer |
-| 20 | Learnable PE | 🔥 | ⭐ | 可学习的嵌入，BERT/GPT |
-| 21 | RoPE 旋转位置编码 | 🔥🔥🔥 | ⭐⭐⭐⭐ | 复数旋转，相对位置，LLM 主流 |
-| 22 | ALiBi | 🔥🔥 | ⭐⭐⭐ | attention 加线性偏置，长度外推好 |
-
-### 🎲 采样策略 → [查看](docs/04-sampling.md)
+### 📏 归一化层 → [查看](docs/02-normalization.md) · [PDF](pdfs/02-normalization.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 23 | Greedy Decoding | 🔥 | ⭐ | 每步选 argmax，确定性输出 |
-| 24 | Temperature Sampling | 🔥🔥🔥 | ⭐⭐ | `logits/T` 控制随机性 |
-| 25 | Top-k Sampling | 🔥🔥 | ⭐⭐ | 只从 top-k 中采样 |
-| 26 | Top-p (Nucleus) Sampling | 🔥🔥🔥 | ⭐⭐⭐ | 累积概率达到 p 后截断 |
-| 27 | Beam Search | 🔥🔥 | ⭐⭐⭐ | 保留 k 个最优序列 |
+| 15 | [Layer Normalization](docs/02-normalization.md#layer-normalization) | 🔥🔥🔥 | ⭐⭐ | 沿特征维度归一化，Transformer 标配 |
+| 16 | [RMS Normalization](docs/02-normalization.md#rms-normalization) | 🔥🔥🔥 | ⭐⭐ | 去掉均值只除 RMS，LLaMA 用 |
+| 17 | [Batch Normalization](docs/02-normalization.md#batch-normalization) | 🔥 | ⭐⭐ | 沿 batch 维度归一化，CNN 常用 |
+| 18 | [Pre-Norm vs Post-Norm](docs/02-normalization.md#pre-norm-vs-post-norm) | 🔥🔥 | ⭐ | Pre-Norm 训练稳定，现代 LLM 主流 |
 
-### 📉 损失函数 → [查看](docs/05-loss-functions.md)
-
-| # | 题目 | Hot | 难度 | 一句话 |
-|:---:|:---|:---:|:---:|:---|
-| 28 | Cross Entropy Loss | 🔥🔥🔥 | ⭐⭐⭐ | `-log(p_true)`，分类标配 |
-| 29 | Language Model Loss | 🔥🔥🔥 | ⭐⭐ | CE 的自回归版，next token prediction |
-| 30 | KL Divergence | 🔥🔥 | ⭐⭐⭐ | 分布差异度量，蒸馏/RLHF 用 |
-| 31 | MSE Loss | 🔥 | ⭐ | `(y-ŷ)²`，回归任务 |
-| 32 | Focal Loss | 🔥 | ⭐⭐⭐ | 降低易分类样本权重 |
-| 33 | SFT Loss | 🔥🔥 | ⭐⭐ | 带 mask 的 CE，只算 response |
-| 34 | Reward Model Loss | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`，偏好学习 |
-| 35 | Contrastive Loss | 🔥 | ⭐⭐⭐ | 正样本近，负样本远 |
-
-### ⚡ 优化器 → [查看](docs/06-optimizers.md)
+### 📍 位置编码 → [查看](docs/03-position-encoding.md) · [PDF](pdfs/03-position-encoding.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 36 | SGD | 🔥 | ⭐ | 最基础 `w -= lr * grad` |
-| 37 | SGD + Momentum | 🔥 | ⭐⭐ | 加动量，加速收敛 |
-| 38 | Adam | 🔥🔥🔥 | ⭐⭐⭐ | 自适应学习率，一阶+二阶矩 |
-| 39 | AdamW | 🔥🔥🔥 | ⭐⭐⭐ | 解耦权重衰减，LLM 标配 |
-| 40 | 学习率调度 | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
+| 19 | [Sinusoidal PE](docs/03-position-encoding.md#sinusoidal-位置编码) | 🔥 | ⭐⭐ | sin/cos 固定编码，原始 Transformer |
+| 20 | [Learnable PE](docs/03-position-encoding.md#learnable-位置编码) | 🔥 | ⭐ | 可学习的嵌入，BERT/GPT |
+| 21 | [RoPE 旋转位置编码](docs/03-position-encoding.md#rope-旋转位置编码) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 复数旋转，相对位置，LLM 主流 |
+| 22 | [ALiBi](docs/03-position-encoding.md#alibi) | 🔥🔥 | ⭐⭐⭐ | attention 加线性偏置，长度外推好 |
 
-### 🎮 强化学习 (RLHF) → [查看](docs/07-reinforcement-learning.md)
-
-| # | 题目 | Hot | 难度 | 一句话 |
-|:---:|:---|:---:|:---:|:---|
-| 41 | REINFORCE | 🔥 | ⭐⭐⭐ | 策略梯度基础 `∇log π × R` |
-| 42 | GAE | 🔥🔥🔥 | ⭐⭐⭐⭐ | 优势估计，平衡偏差方差 |
-| 43 | PPO | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | clip 限制更新幅度，RLHF 核心 |
-| 44 | PPO-Clip | 🔥🔥🔥 | ⭐⭐⭐⭐ | ratio clip 版本 |
-| 45 | DPO | 🔥🔥🔥 | ⭐⭐⭐⭐ | 直接偏好优化，无需 RM |
-| 46 | GRPO | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | 组相对策略优化，DeepSeek 用 |
-| 47 | KL 惩罚 | 🔥🔥 | ⭐⭐ | 防止偏离参考策略太远 |
-| 48 | Reward Shaping | 🔥 | ⭐⭐⭐ | 奖励工程，稀疏 → 稠密 |
-
-### 🚀 高效训练 → [查看](docs/08-efficient-training.md)
+### 🎲 采样策略 → [查看](docs/04-sampling.md) · [PDF](pdfs/04-sampling.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 49 | LoRA | 🔥🔥🔥 | ⭐⭐⭐⭐ | 低秩分解 `W + BA` |
-| 50 | QLoRA | 🔥🔥 | ⭐⭐⭐⭐ | LoRA + 4bit 量化 |
-| 51 | Gradient Checkpointing | 🔥🔥 | ⭐⭐⭐ | 时间换空间，重计算激活值 |
-| 52 | Mixed Precision (FP16/BF16) | 🔥🔥 | ⭐⭐⭐ | 降低显存，加速计算 |
-| 53 | Gradient Accumulation | 🔥🔥 | ⭐⭐ | 小 batch 模拟大 batch |
+| 23 | [Greedy Decoding](docs/04-sampling.md#greedy-decoding) | 🔥 | ⭐ | 每步选 argmax，确定性输出 |
+| 24 | [Temperature Sampling](docs/04-sampling.md#temperature-sampling) | 🔥🔥🔥 | ⭐⭐ | `logits/T` 控制随机性 |
+| 25 | [Top-k Sampling](docs/04-sampling.md#top-k-sampling) | 🔥🔥 | ⭐⭐ | 只从 top-k 中采样 |
+| 26 | [Top-p (Nucleus) Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | 🔥🔥🔥 | ⭐⭐⭐ | 累积概率达到 p 后截断 |
+| 27 | [Beam Search](docs/04-sampling.md#beam-search) | 🔥🔥 | ⭐⭐⭐ | 保留 k 个最优序列 |
 
-### ⚡ 推理优化 → [查看](docs/09-inference-optimization.md)
-
-| # | 题目 | Hot | 难度 | 一句话 |
-|:---:|:---|:---:|:---:|:---|
-| 54 | KV Cache | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，加速自回归 |
-| 55 | Paged Attention | 🔥🔥 | ⭐⭐⭐⭐ | 分页管理 KV，vLLM 核心 |
-| 56 | Speculative Decoding | 🔥🔥 | ⭐⭐⭐⭐ | 小模型猜测 + 大模型验证 |
-| 57 | Continuous Batching | 🔥🔥 | ⭐⭐⭐ | 动态 batch，提高吞吐 |
-| 58 | Quantization (INT8/INT4) | 🔥🔥 | ⭐⭐⭐ | 量化推理，显存减半+ |
-
-### 🏗️ Transformer 架构 → [查看](docs/10-transformer-architecture.md)
+### 📉 损失函数 → [查看](docs/05-loss-functions.md) · [PDF](pdfs/05-loss-functions.pdf)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
-| 59 | Encoder-Only (BERT) | 🔥 | ⭐⭐⭐ | 双向注意力，理解任务 |
-| 60 | Decoder-Only (GPT) | 🔥🔥🔥 | ⭐⭐⭐ | 因果注意力，生成任务，LLM 主流 |
-| 61 | Encoder-Decoder (T5) | 🔥 | ⭐⭐⭐ | 序列到序列，翻译/摘要 |
-| 62 | FFN | 🔥🔥 | ⭐⭐ | 两层 MLP，中间扩展 4x |
-| 63 | SwiGLU | 🔥🔥 | ⭐⭐⭐ | 门控 FFN，LLaMA 用 |
+| 28 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥🔥🔥 | ⭐⭐⭐ | `-log(p_true)`，分类标配 |
+| 29 | [Language Model Loss](docs/05-loss-functions.md#language-model-loss) | 🔥🔥🔥 | ⭐⭐ | CE 的自回归版，next token prediction |
+| 30 | [KL Divergence](docs/05-loss-functions.md#kl-divergence) | 🔥🔥 | ⭐⭐⭐ | 分布差异度量，蒸馏/RLHF 用 |
+| 31 | [MSE Loss](docs/05-loss-functions.md#mse-loss) | 🔥 | ⭐ | `(y-ŷ)²`，回归任务 |
+| 32 | [Focal Loss](docs/05-loss-functions.md#focal-loss) | 🔥 | ⭐⭐⭐ | 降低易分类样本权重 |
+| 33 | [SFT Loss](docs/05-loss-functions.md#sft-loss) | 🔥🔥 | ⭐⭐ | 带 mask 的 CE，只算 response |
+| 34 | [Reward Model Loss](docs/05-loss-functions.md#reward-model-loss) | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`，偏好学习 |
+| 35 | [Contrastive Loss](docs/05-loss-functions.md#contrastive-loss) | 🔥 | ⭐⭐⭐ | 正样本近，负样本远 |
+
+### ⚡ 优化器 → [查看](docs/06-optimizers.md) · [PDF](pdfs/06-optimizers.pdf)
+
+| # | 题目 | Hot | 难度 | 一句话 |
+|:---:|:---|:---:|:---:|:---|
+| 36 | [SGD](docs/06-optimizers.md#sgd) | 🔥 | ⭐ | 最基础 `w -= lr * grad` |
+| 37 | [SGD + Momentum](docs/06-optimizers.md#sgd--momentum) | 🔥 | ⭐⭐ | 加动量，加速收敛 |
+| 38 | [Adam](docs/06-optimizers.md#adam) | 🔥🔥🔥 | ⭐⭐⭐ | 自适应学习率，一阶+二阶矩 |
+| 39 | [AdamW](docs/06-optimizers.md#adamw) | 🔥🔥🔥 | ⭐⭐⭐ | 解耦权重衰减，LLM 标配 |
+| 40 | [学习率调度](docs/06-optimizers.md#学习率调度) | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
+
+### 🎮 强化学习 (RLHF) → [查看](docs/07-reinforcement-learning.md) · [PDF](pdfs/07-reinforcement-learning.pdf)
+
+| # | 题目 | Hot | 难度 | 一句话 |
+|:---:|:---|:---:|:---:|:---|
+| 41 | [REINFORCE](docs/07-reinforcement-learning.md#reinforce) | 🔥 | ⭐⭐⭐ | 策略梯度基础 `∇log π × R` |
+| 42 | [GAE](docs/07-reinforcement-learning.md#gae) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 优势估计，平衡偏差方差 |
+| 43 | [PPO](docs/07-reinforcement-learning.md#ppo) | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | clip 限制更新幅度，RLHF 核心 |
+| 44 | [PPO-Clip](docs/07-reinforcement-learning.md#ppo-clip) | 🔥🔥🔥 | ⭐⭐⭐⭐ | ratio clip 版本 |
+| 45 | [DPO](docs/07-reinforcement-learning.md#dpo) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 直接偏好优化，无需 RM |
+| 46 | [GRPO](docs/07-reinforcement-learning.md#grpo) | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | 组相对策略优化，DeepSeek 用 |
+| 47 | [KL 惩罚](docs/07-reinforcement-learning.md#kl-惩罚) | 🔥🔥 | ⭐⭐ | 防止偏离参考策略太远 |
+| 48 | [Reward Shaping](docs/07-reinforcement-learning.md#reward-shaping) | 🔥 | ⭐⭐⭐ | 奖励工程，稀疏 → 稠密 |
+
+### 🚀 高效训练 → [查看](docs/08-efficient-training.md) · [PDF](pdfs/08-efficient-training.pdf)
+
+| # | 题目 | Hot | 难度 | 一句话 |
+|:---:|:---|:---:|:---:|:---|
+| 49 | [LoRA](docs/08-efficient-training.md#lora) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 低秩分解 `W + BA` |
+| 50 | [QLoRA](docs/08-efficient-training.md#qlora) | 🔥🔥 | ⭐⭐⭐⭐ | LoRA + 4bit 量化 |
+| 51 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | 🔥🔥 | ⭐⭐⭐ | 时间换空间，重计算激活值 |
+| 52 | [Mixed Precision (FP16/BF16)](docs/08-efficient-training.md#mixed-precision) | 🔥🔥 | ⭐⭐⭐ | 降低显存，加速计算 |
+| 53 | [Gradient Accumulation](docs/08-efficient-training.md#gradient-accumulation) | 🔥🔥 | ⭐⭐ | 小 batch 模拟大 batch |
+
+### ⚡ 推理优化 → [查看](docs/09-inference-optimization.md) · [PDF](pdfs/09-inference-optimization.pdf)
+
+| # | 题目 | Hot | 难度 | 一句话 |
+|:---:|:---|:---:|:---:|:---|
+| 54 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，加速自回归 |
+| 55 | [Paged Attention](docs/09-inference-optimization.md#paged-attention) | 🔥🔥 | ⭐⭐⭐⭐ | 分页管理 KV，vLLM 核心 |
+| 56 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | 🔥🔥 | ⭐⭐⭐⭐ | 小模型猜测 + 大模型验证 |
+| 57 | [Continuous Batching](docs/09-inference-optimization.md#continuous-batching) | 🔥🔥 | ⭐⭐⭐ | 动态 batch，提高吞吐 |
+| 58 | [Quantization (INT8/INT4)](docs/09-inference-optimization.md#quantization) | 🔥🔥 | ⭐⭐⭐ | 量化推理，显存减半+ |
+
+### 🏗️ Transformer 架构 → [查看](docs/10-transformer-architecture.md) · [PDF](pdfs/10-transformer-architecture.pdf)
+
+| # | 题目 | Hot | 难度 | 一句话 |
+|:---:|:---|:---:|:---:|:---|
+| 59 | [Encoder-Only (BERT)](docs/10-transformer-architecture.md#encoder-only-bert) | 🔥 | ⭐⭐⭐ | 双向注意力，理解任务 |
+| 60 | [Decoder-Only (GPT)](docs/10-transformer-architecture.md#decoder-only-gpt) | 🔥🔥🔥 | ⭐⭐⭐ | 因果注意力，生成任务，LLM 主流 |
+| 61 | [Encoder-Decoder (T5)](docs/10-transformer-architecture.md#encoder-decoder-t5) | 🔥 | ⭐⭐⭐ | 序列到序列，翻译/摘要 |
+| 62 | [FFN](docs/10-transformer-architecture.md#ffn) | 🔥🔥 | ⭐⭐ | 两层 MLP，中间扩展 4x |
+| 63 | [SwiGLU](docs/10-transformer-architecture.md#swiglu) | 🔥🔥 | ⭐⭐⭐ | 门控 FFN，LLaMA 用 |
 
 ---
 
 ## 🔥 高频 Top 20
 
-> 由社区投票实时产生，每日 00:00 自动更新
+> 由社区投票实时产生，每小时 自动更新
 >
 > **最后更新**: 2025-03-26 (初始排名，等待社区投票)
 
@@ -178,50 +178,26 @@
 | 🥇 | Multi-Head Attention | Attention | 🔥 — |
 | 🥈 | KV Cache | 推理优化 | 🔥 — |
 | 🥉 | RoPE 位置编码 | 位置编码 | 🔥 — |
-| 4 | PPO | 强化学习 | 🔥 — |
-| 5 | DPO | 强化学习 | 🔥 — |
-| 6 | GRPO | 强化学习 | 🔥 — |
-| 7 | Cross Entropy Loss | 损失函数 | 🔥 — |
+| 4 | [PPO](docs/07-reinforcement-learning.md#ppo) | 强化学习 | 🔥 — |
+| 5 | [DPO](docs/07-reinforcement-learning.md#dpo) | 强化学习 | 🔥 — |
+| 6 | [GRPO](docs/07-reinforcement-learning.md#grpo) | 强化学习 | 🔥 — |
+| 7 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | 损失函数 | 🔥 — |
 | 8 | LayerNorm / RMSNorm | 归一化 | 🔥 — |
 | 9 | Adam / AdamW | 优化器 | 🔥 — |
 | 10 | Top-p Sampling | 采样策略 | 🔥 — |
-| 11 | LoRA | 高效训练 | 🔥 — |
+| 11 | [LoRA](docs/08-efficient-training.md#lora) | 高效训练 | 🔥 — |
 | 12 | GQA / MQA | Attention | 🔥 — |
-| 13 | Causal Mask | Attention | 🔥 — |
-| 14 | GAE | 强化学习 | 🔥 — |
-| 15 | Beam Search | 采样策略 | 🔥 — |
-| 16 | Flash Attention | Attention | 🔥 — |
+| 13 | [Causal Mask](docs/01-attention.md#causal-mask) | Attention | 🔥 — |
+| 14 | [GAE](docs/07-reinforcement-learning.md#gae) | 强化学习 | 🔥 — |
+| 15 | [Beam Search](docs/04-sampling.md#beam-search) | 采样策略 | 🔥 — |
+| 16 | [Flash Attention](docs/01-attention.md#flash-attention-原理) | Attention | 🔥 — |
 | 17 | Decoder-Only 架构 | 架构 | 🔥 — |
-| 18 | Gradient Checkpointing | 高效训练 | 🔥 — |
-| 19 | Speculative Decoding | 推理优化 | 🔥 — |
-| 20 | SwiGLU | 架构 | 🔥 — |
+| 18 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | 高效训练 | 🔥 — |
+| 19 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | 推理优化 | 🔥 — |
+| 20 | [SwiGLU](docs/10-transformer-architecture.md#swiglu) | 架构 | 🔥 — |
 
 ---
 
-## 📖 学习路线
-
-### ⚡ 面试前突击（1-2 天）
-
-```
-高频 Top 20 → Attention 全部 → 损失函数 → 采样策略
-```
-
-### 📚 系统学习（1 周）
-
-```
-按分类顺序学习，每个分类先看原理再看代码
-```
-
-### 🎯 按方向准备
-
-| 方向 | 重点章节 |
-|:---|:---|
-| **大厂基础岗** | Attention + 损失函数 + 优化器 + 归一化 |
-| **RLHF 方向** | 强化学习全部 + 损失函数 |
-| **推理优化** | 推理优化 + Attention + 高效训练 |
-| **训练优化** | 高效训练 + 优化器 + 架构 |
-
----
 
 ## 🗳️ 参与投票
 

@@ -2,246 +2,229 @@
 
 # 🔥 LLM Interview Hot 100
 
-### *LLM 时代的 Hot 100*
+### *The Hot 100 for the LLM Era*
 
-**大模型面试手撕代码 · 社区投票驱动 · 每日更新排行**
+**Hand-torn Code for LLM Interviews · Community-Driven Voting · Real-time Rankings**
 
 [![GitHub stars](https://img.shields.io/github/stars/cdhx/LLM-Code-Hot-100?style=social)](https://github.com/cdhx/LLM-Code-Hot-100)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Vote](https://img.shields.io/badge/🗳️-参与投票-ff6b6b)](https://cdhx.github.io/LLM-Code-Hot-100)
+[![Vote](https://img.shields.io/badge/🗳️-Vote_Now-ff6b6b)](https://cdhx.github.io/LLM-Code-Hot-100)
+
+**[English](README.md) | [中文](README_zh.md)**
 
 <p align="center">
-  <strong>📖 背完这 100 题，大模型面试手撕不再慌</strong>
+  <strong>📖 Master these 100 topics, ace your LLM interview coding challenges</strong>
 </p>
 
 ---
 
-**"面试官让你手撕 Multi-Head Attention，你还在紧张？"**
+**"Asked to implement Multi-Head Attention from scratch?"**
 
-**"PPO、DPO、GRPO 的区别，你能写出来吗？"**
+**"Can you write PPO, DPO, GRPO and explain the differences?"**
 
-**"KV Cache 怎么实现？Flash Attention 的核心思想是什么？"**
+**"How does KV Cache work? What's the core idea of Flash Attention?"**
 
-**👉 [在线投票：哪道题最常被考？](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
+**👉 [Vote: Which topics appear most often?](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
 
 </div>
 
 ---
 
-## ✨ 项目特点
+## ✨ Features
 
-| 特点 | 描述 |
+| Feature | Description |
 |:---:|:---|
-| 🎯 **面试真题** | 社区投票驱动，真实反映面试频率 |
-| 📝 **详细注释** | 每行代码都有清晰注释，理解原理而非死记 |
-| 🔥 **工业级代码** | 包含数值稳定性、边界处理等生产细节 |
-| 🆚 **方法对比** | 同类方法一览对比，记住一个就记住一组 |
-| ❓ **QA 答疑** | 预判你的困惑，看完豁然开朗 |
+| 🎯 **Real Interview Questions** | Rankings driven by community votes |
+| 📝 **Detailed Comments** | Every line of code clearly annotated |
+| 🔥 **Production-Ready** | Numerical stability, edge cases handled |
+| 🆚 **Method Comparisons** | Side-by-side comparisons of similar methods |
+| ❓ **Q&A Sections** | Common questions answered proactively |
 
 ---
 
-## 📋 完整题目清单
+## 📋 Complete Topic List
 
-> **图例：** 🔥🔥🔥 必考 ｜ 🔥🔥 高频 ｜ 🔥 偶尔 ｜ 无标记 了解即可
+> **Legend:** 🔥🔥🔥 Must Know ｜ 🔥🔥 High Frequency ｜ 🔥 Occasional ｜ No mark = Good to know
 >
-> **👉 [参与投票](https://cdhx.github.io/LLM-Code-Hot-100)**，用你的面试经历帮助社区校准 Hot 程度！
+> **👉 [Vote Now](https://cdhx.github.io/LLM-Code-Hot-100)** to help calibrate the real interview frequency!
 
-### 📖 LLM 基础 → [查看](docs/00-llm-basics.md) · [PDF](pdfs/00-llm-basics.pdf)
+### 📖 LLM Basics → [View](docs/00-llm-basics.md) · [PDF](pdfs/00-llm-basics.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 1 | [梯度与反向传播](docs/00-llm-basics.md#梯度与反向传播) | 🔥🔥 | ⭐⭐ | 链式法则手推，深度学习根基 |
-| 2 | [线性回归](docs/00-llm-basics.md#线性回归) | 🔥 | ⭐ | `y = Wx + b`，最简单的模型 |
-| 3 | [逻辑回归](docs/00-llm-basics.md#逻辑回归) | 🔥🔥 | ⭐⭐ | `sigmoid(Wx + b)`，二分类基础 |
-| 4 | [Softmax 回归](docs/00-llm-basics.md#softmax-回归) | 🔥 | ⭐⭐ | 多分类，LLM 输出层 |
-| 5 | [MLP 多层感知机](docs/00-llm-basics.md#mlp-多层感知机) | 🔥🔥 | ⭐⭐ | 万能近似器，FFN 的基础 |
-| 6 | [激活函数](docs/00-llm-basics.md#激活函数) | 🔥🔥 | ⭐ | ReLU/GELU/SiLU 及其梯度 |
+| 1 | [Gradient & Backprop](docs/00-llm-basics.md#梯度与反向传播) | 🔥🔥 | ⭐⭐ | Chain rule, foundation of deep learning |
+| 2 | [Linear Regression](docs/00-llm-basics.md#线性回归) | 🔥 | ⭐ | `y = Wx + b`, simplest model |
+| 3 | [Logistic Regression](docs/00-llm-basics.md#逻辑回归) | 🔥🔥 | ⭐⭐ | `sigmoid(Wx + b)`, binary classification |
+| 4 | Softmax Regression | 🔥 | ⭐⭐ | Multi-class, LLM output layer |
+| 5 | [MLP](docs/00-llm-basics.md#mlp-多层感知机) | 🔥🔥 | ⭐⭐ | Universal approximator, FFN basis |
+| 6 | [Activation Functions](docs/00-llm-basics.md#激活函数) | 🔥🔥 | ⭐ | ReLU/GELU/SiLU and gradients |
 
-### 🧠 Attention 机制 → [查看](docs/01-attention.md) · [PDF](pdfs/01-attention.pdf)
+### �� Attention Mechanisms → [View](docs/01-attention.md) · [PDF](pdfs/01-attention.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 7 | [Scaled Dot-Product Attention](docs/01-attention.md#scaled-dot-product-attention) | 🔥🔥🔥 | ⭐⭐⭐ | `softmax(QK^T/√d)V`，一切的基础 |
-| 8 | [Multi-Head Attention](docs/01-attention.md#multi-head-attention) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 多头并行，不同子空间的注意力 |
-| 9 | [Causal Mask](docs/01-attention.md#causal-mask) | 🔥🔥🔥 | ⭐⭐ | 下三角掩码，防止看到未来 |
-| 10 | [Grouped Query Attention (GQA)](docs/01-attention.md#grouped-query-attention-gqa) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Q头数 > KV头数，LLaMA2 主流 |
-| 11 | [Multi-Query Attention (MQA)](docs/01-attention.md#multi-query-attention-mqa) | 🔥🔥 | ⭐⭐⭐ | 所有 Q 共享一组 KV |
-| 12 | [Flash Attention](docs/01-attention.md#flash-attention-原理) | 🔥🔥 | ⭐⭐⭐⭐⭐ | 分块计算，IO 感知，内存 O(N) |
-| 13 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，避免重复计算 |
-| 14 | [Cross Attention](docs/01-attention.md#cross-attention) | 🔥 | ⭐⭐⭐ | Q 来自 decoder，KV 来自 encoder |
+| 7 | [Scaled Dot-Product Attention](docs/01-attention.md#scaled-dot-product-attention) | 🔥🔥🔥 | ⭐⭐⭐ | `softmax(QK^T/√d)V`, the foundation |
+| 8 | [Multi-Head Attention](docs/01-attention.md#multi-head-attention) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Parallel heads, different subspaces |
+| 9 | [Causal Mask](docs/01-attention.md#causal-mask) | 🔥🔥🔥 | ⭐⭐ | Lower triangular, prevent future peeking |
+| 10 | [GQA](docs/01-attention.md#grouped-query-attention-gqa) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Q heads > KV heads, LLaMA2 standard |
+| 11 | [MQA](docs/01-attention.md#multi-query-attention-mqa) | 🔥🔥 | ⭐⭐⭐ | All Q share one KV |
+| 12 | [Flash Attention](docs/01-attention.md#flash-attention-原理) | 🔥🔥 | ⭐⭐⭐⭐⭐ | Tiled computation, IO-aware, O(N) memory |
+| 13 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Cache historical KV, avoid recomputation |
+| 14 | [Cross Attention](docs/01-attention.md#multi-head-attention) | 🔥 | ⭐⭐⭐ | Q from decoder, KV from encoder |
 
-### 📏 归一化层 → [查看](docs/02-normalization.md) · [PDF](pdfs/02-normalization.pdf)
+### 📏 Normalization → [View](docs/02-normalization.md) · [PDF](pdfs/02-normalization.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 15 | [Layer Normalization](docs/02-normalization.md#layer-normalization) | 🔥🔥🔥 | ⭐⭐ | 沿特征维度归一化，Transformer 标配 |
-| 16 | [RMS Normalization](docs/02-normalization.md#rms-normalization) | 🔥🔥🔥 | ⭐⭐ | 去掉均值只除 RMS，LLaMA 用 |
-| 17 | [Batch Normalization](docs/02-normalization.md#batch-normalization) | 🔥 | ⭐⭐ | 沿 batch 维度归一化，CNN 常用 |
-| 18 | [Pre-Norm vs Post-Norm](docs/02-normalization.md#pre-norm-vs-post-norm) | 🔥🔥 | ⭐ | Pre-Norm 训练稳定，现代 LLM 主流 |
+| 15 | [Layer Normalization](docs/02-normalization.md#layer-normalization) | 🔥🔥🔥 | ⭐⭐ | Normalize across features, Transformer standard |
+| 16 | [RMS Normalization](docs/02-normalization.md#rms-normalization) | 🔥🔥🔥 | ⭐⭐ | No mean, just RMS, LLaMA uses it |
+| 17 | [Batch Normalization](docs/02-normalization.md#batch-normalization) | 🔥 | ⭐⭐ | Normalize across batch, CNN common |
+| 18 | [Pre-Norm vs Post-Norm](docs/02-normalization.md#pre-norm-vs-post-norm) | 🔥🔥 | ⭐ | Pre-Norm more stable, modern LLM standard |
 
-### 📍 位置编码 → [查看](docs/03-position-encoding.md) · [PDF](pdfs/03-position-encoding.pdf)
+### 📍 Position Encoding → [View](docs/03-position-encoding.md) · [PDF](pdfs/03-position-encoding.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 19 | [Sinusoidal PE](docs/03-position-encoding.md#sinusoidal-位置编码) | 🔥 | ⭐⭐ | sin/cos 固定编码，原始 Transformer |
-| 20 | [Learnable PE](docs/03-position-encoding.md#learnable-位置编码) | 🔥 | ⭐ | 可学习的嵌入，BERT/GPT |
-| 21 | [RoPE 旋转位置编码](docs/03-position-encoding.md#rope-旋转位置编码) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 复数旋转，相对位置，LLM 主流 |
-| 22 | [ALiBi](docs/03-position-encoding.md#alibi) | 🔥🔥 | ⭐⭐⭐ | attention 加线性偏置，长度外推好 |
+| 19 | [Sinusoidal PE](docs/03-position-encoding.md#sinusoidal-position-encoding) | 🔥 | ⭐⭐ | sin/cos fixed, original Transformer |
+| 20 | [Learnable PE](docs/03-position-encoding.md#learnable-position-encoding) | 🔥 | ⭐ | Learnable embeddings, BERT/GPT |
+| 21 | [RoPE](docs/03-position-encoding.md#rotary-position-embedding-rope) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Complex rotation, relative position, LLM standard |
+| 22 | [ALiBi](docs/03-position-encoding.md#alibi) | 🔥🔥 | ⭐⭐⭐ | Linear bias in attention, good extrapolation |
 
-### 🎲 采样策略 → [查看](docs/04-sampling.md) · [PDF](pdfs/04-sampling.pdf)
+### 🎲 Sampling Strategies → [View](docs/04-sampling.md) · [PDF](pdfs/04-sampling.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 23 | [Greedy Decoding](docs/04-sampling.md#greedy-decoding) | 🔥 | ⭐ | 每步选 argmax，确定性输出 |
-| 24 | [Temperature Sampling](docs/04-sampling.md#temperature-sampling) | 🔥🔥🔥 | ⭐⭐ | `logits/T` 控制随机性 |
-| 25 | [Top-k Sampling](docs/04-sampling.md#top-k-sampling) | 🔥🔥 | ⭐⭐ | 只从 top-k 中采样 |
-| 26 | [Top-p (Nucleus) Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | 🔥🔥🔥 | ⭐⭐⭐ | 累积概率达到 p 后截断 |
-| 27 | [Beam Search](docs/04-sampling.md#beam-search) | 🔥🔥 | ⭐⭐⭐ | 保留 k 个最优序列 |
+| 23 | [Greedy Decoding](docs/04-sampling.md#greedy-decoding) | 🔥 | ⭐ | Pick argmax each step |
+| 24 | [Temperature Sampling](docs/04-sampling.md#temperature-sampling) | 🔥🔥🔥 | ⭐⭐ | `logits/T` controls randomness |
+| 25 | [Top-k Sampling](docs/04-sampling.md#top-k-sampling) | 🔥🔥 | ⭐⭐ | Sample from top-k only |
+| 26 | [Top-p Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | 🔥🔥🔥 | ⭐⭐⭐ | Cumulative probability cutoff |
+| 27 | [Beam Search](docs/04-sampling.md#beam-search) | 🔥🔥 | ⭐⭐⭐ | Keep k best sequences |
 
-### 📉 损失函数 → [查看](docs/05-loss-functions.md) · [PDF](pdfs/05-loss-functions.pdf)
+### 📉 Loss Functions → [View](docs/05-loss-functions.md) · [PDF](pdfs/05-loss-functions.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 28 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥🔥🔥 | ⭐⭐⭐ | `-log(p_true)`，分类标配 |
-| 29 | [Language Model Loss](docs/05-loss-functions.md#language-model-loss) | 🔥🔥🔥 | ⭐⭐ | CE 的自回归版，next token prediction |
-| 30 | [KL Divergence](docs/05-loss-functions.md#kl-divergence) | 🔥🔥 | ⭐⭐⭐ | 分布差异度量，蒸馏/RLHF 用 |
-| 31 | [MSE Loss](docs/05-loss-functions.md#mse-loss) | 🔥 | ⭐ | `(y-ŷ)²`，回归任务 |
-| 32 | [Focal Loss](docs/05-loss-functions.md#focal-loss) | 🔥 | ⭐⭐⭐ | 降低易分类样本权重 |
-| 33 | [SFT Loss](docs/05-loss-functions.md#sft-loss) | 🔥🔥 | ⭐⭐ | 带 mask 的 CE，只算 response |
-| 34 | [Reward Model Loss](docs/05-loss-functions.md#reward-model-loss) | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`，偏好学习 |
-| 35 | [Contrastive Loss](docs/05-loss-functions.md#contrastive-loss) | 🔥 | ⭐⭐⭐ | 正样本近，负样本远 |
+| 28 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥🔥🔥 | ⭐⭐⭐ | `-log(p_true)`, classification standard |
+| 29 | [LM Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥🔥🔥 | ⭐⭐ | Autoregressive CE, next token prediction |
+| 30 | [KL Divergence](docs/05-loss-functions.md#kl-divergence) | 🔥🔥 | ⭐⭐⭐ | Distribution difference, distillation/RLHF |
+| 31 | [MSE Loss](docs/05-loss-functions.md#mse-loss) | 🔥 | ⭐ | `(y-ŷ)²`, regression |
+| 32 | [Focal Loss](docs/05-loss-functions.md#focal-loss) | 🔥 | ⭐⭐⭐ | Down-weight easy samples |
+| 33 | [SFT Loss](docs/05-loss-functions.md#sft-loss) | 🔥🔥 | ⭐⭐ | Masked CE, response only |
+| 34 | [Reward Model Loss](docs/05-loss-functions.md#reward-model-loss) | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`, preference learning |
+| 35 | [Contrastive Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥 | ⭐⭐⭐ | Pull positives, push negatives |
 
-### ⚡ 优化器 → [查看](docs/06-optimizers.md) · [PDF](pdfs/06-optimizers.pdf)
+### ⚡ Optimizers → [View](docs/06-optimizers.md) · [PDF](pdfs/06-optimizers.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 36 | [SGD](docs/06-optimizers.md#sgd) | 🔥 | ⭐ | 最基础 `w -= lr * grad` |
-| 37 | [SGD + Momentum](docs/06-optimizers.md#sgd--momentum) | 🔥 | ⭐⭐ | 加动量，加速收敛 |
-| 38 | [Adam](docs/06-optimizers.md#adam) | 🔥🔥🔥 | ⭐⭐⭐ | 自适应学习率，一阶+二阶矩 |
-| 39 | [AdamW](docs/06-optimizers.md#adamw) | 🔥🔥🔥 | ⭐⭐⭐ | 解耦权重衰减，LLM 标配 |
-| 40 | [学习率调度](docs/06-optimizers.md#学习率调度) | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
+| 36 | [SGD](docs/06-optimizers.md#sgd) | 🔥 | ⭐ | Basic `w -= lr * grad` |
+| 37 | [SGD + Momentum](docs/06-optimizers.md#sgd-with-momentum) | 🔥 | ⭐⭐ | Add momentum, faster convergence |
+| 38 | [Adam](docs/06-optimizers.md#adam) | 🔥🔥🔥 | ⭐⭐⭐ | Adaptive LR, 1st & 2nd moments |
+| 39 | [AdamW](docs/06-optimizers.md#adamw) | 🔥🔥🔥 | ⭐⭐⭐ | Decoupled weight decay, LLM standard |
+| 40 | [LR Schedule](docs/06-optimizers.md#learning-rate-scheduler) | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
 
-### 🎮 强化学习 (RLHF) → [查看](docs/07-reinforcement-learning.md) · [PDF](pdfs/07-reinforcement-learning.pdf)
+### 🎮 Reinforcement Learning (RLHF) → [View](docs/07-reinforcement-learning.md) · [PDF](pdfs/07-reinforcement-learning.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 41 | [REINFORCE](docs/07-reinforcement-learning.md#reinforce) | 🔥 | ⭐⭐⭐ | 策略梯度基础 `∇log π × R` |
-| 42 | [GAE](docs/07-reinforcement-learning.md#gae) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 优势估计，平衡偏差方差 |
-| 43 | [PPO](docs/07-reinforcement-learning.md#ppo) | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | clip 限制更新幅度，RLHF 核心 |
-| 44 | [PPO-Clip](docs/07-reinforcement-learning.md#ppo-clip) | 🔥🔥🔥 | ⭐⭐⭐⭐ | ratio clip 版本 |
-| 45 | [DPO](docs/07-reinforcement-learning.md#dpo) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 直接偏好优化，无需 RM |
-| 46 | [GRPO](docs/07-reinforcement-learning.md#grpo) | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | 组相对策略优化，DeepSeek 用 |
-| 47 | [KL 惩罚](docs/07-reinforcement-learning.md#kl-惩罚) | 🔥🔥 | ⭐⭐ | 防止偏离参考策略太远 |
-| 48 | [Reward Shaping](docs/07-reinforcement-learning.md#reward-shaping) | 🔥 | ⭐⭐⭐ | 奖励工程，稀疏 → 稠密 |
+| 41 | [REINFORCE](docs/07-reinforcement-learning.md#reinforce) | 🔥 | ⭐⭐⭐ | Policy gradient `∇log π × R` |
+| 42 | [GAE](docs/07-reinforcement-learning.md#gae) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Advantage estimation, bias-variance tradeoff |
+| 43 | [PPO](docs/07-reinforcement-learning.md#ppo) | ��🔥🔥 | ⭐⭐⭐⭐⭐ | Clip ratio, RLHF core |
+| 44 | [PPO-Clip](docs/07-reinforcement-learning.md#ppo) | ��🔥🔥 | ⭐⭐⭐⭐ | Clipped objective version |
+| 45 | [DPO](docs/07-reinforcement-learning.md#dpo) | 🔥��🔥 | ⭐⭐⭐⭐ | Direct preference optimization, no RM |
+| 46 | [GRPO](docs/07-reinforcement-learning.md#grpo) | 🔥🔥🔥 | ⭐⭐⭐⭐⭐ | Group relative policy, DeepSeek uses |
+| 47 | [KL Penalty](docs/07-reinforcement-learning.md#ppo) | 🔥🔥 | ⭐⭐ | Prevent diverging from reference |
+| 48 | [Reward Shaping](docs/07-reinforcement-learning.md#ppo) | 🔥 | ⭐⭐⭐ | Reward engineering, sparse → dense |
 
-### 🚀 高效训练 → [查看](docs/08-efficient-training.md) · [PDF](pdfs/08-efficient-training.pdf)
+### 🚀 Efficient Training → [View](docs/08-efficient-training.md) · [PDF](pdfs/08-efficient-training.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 49 | [LoRA](docs/08-efficient-training.md#lora) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 低秩分解 `W + BA` |
-| 50 | [QLoRA](docs/08-efficient-training.md#qlora) | 🔥🔥 | ⭐⭐⭐⭐ | LoRA + 4bit 量化 |
-| 51 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | 🔥🔥 | ⭐⭐⭐ | 时间换空间，重计算激活值 |
-| 52 | [Mixed Precision (FP16/BF16)](docs/08-efficient-training.md#mixed-precision) | 🔥🔥 | ⭐⭐⭐ | 降低显存，加速计算 |
-| 53 | [Gradient Accumulation](docs/08-efficient-training.md#gradient-accumulation) | 🔥🔥 | ⭐⭐ | 小 batch 模拟大 batch |
+| 49 | [LoRA](docs/08-efficient-training.md#lora) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Low-rank decomposition `W + BA` |
+| 50 | [QLoRA](docs/08-efficient-training.md#lora) | 🔥🔥 | ⭐⭐⭐⭐ | LoRA + 4bit quantization |
+| 51 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | 🔥🔥 | ⭐⭐⭐ | Trade time for memory |
+| 52 | [Mixed Precision](docs/08-efficient-training.md#mixed-precision-training) | 🔥🔥 | ⭐⭐⭐ | FP16/BF16, less memory, faster |
+| 53 | [Gradient Accumulation](docs/08-efficient-training.md#gradient-accumulation) | 🔥🔥 | ⭐⭐ | Small batch simulates large batch |
 
-### ⚡ 推理优化 → [查看](docs/09-inference-optimization.md) · [PDF](pdfs/09-inference-optimization.pdf)
+### ⚡ Inference Optimization → [View](docs/09-inference-optimization.md) · [PDF](pdfs/09-inference-optimization.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 54 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，加速自回归 |
-| 55 | [Paged Attention](docs/09-inference-optimization.md#paged-attention) | 🔥🔥 | ⭐⭐⭐⭐ | 分页管理 KV，vLLM 核心 |
-| 56 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | 🔥🔥 | ⭐⭐⭐⭐ | 小模型猜测 + 大模型验证 |
-| 57 | [Continuous Batching](docs/09-inference-optimization.md#continuous-batching) | 🔥🔥 | ⭐⭐⭐ | 动态 batch，提高吞吐 |
-| 58 | [Quantization (INT8/INT4)](docs/09-inference-optimization.md#quantization) | 🔥🔥 | ⭐⭐⭐ | 量化推理，显存减半+ |
+| 54 | [KV Cache](docs/09-inference-optimization.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Cache KV, speed up autoregressive |
+| 55 | [Paged Attention](docs/09-inference-optimization.md#pagedattention) | 🔥🔥 | ⭐⭐⭐⭐ | Paged KV management, vLLM core |
+| 56 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | 🔥🔥 | ⭐⭐⭐⭐ | Small model drafts, large verifies |
+| 57 | [Continuous Batching](docs/09-inference-optimization.md#continuous-batching) | 🔥🔥 | ⭐⭐⭐ | Dynamic batching, higher throughput |
+| 58 | [Quantization](docs/09-inference-optimization.md#kv-cache) | 🔥🔥 | ⭐⭐⭐ | INT8/INT4, half+ memory |
 
-### 🏗️ Transformer 架构 → [查看](docs/10-transformer-architecture.md) · [PDF](pdfs/10-transformer-architecture.pdf)
+### 🏗️ Transformer Architecture → [View](docs/10-transformer-architecture.md) · [PDF](pdfs/10-transformer-architecture.pdf)
 
-| # | 题目 | Hot | 难度 | 一句话 |
+| # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
-| 59 | [Encoder-Only (BERT)](docs/10-transformer-architecture.md#encoder-only-bert) | 🔥 | ⭐⭐⭐ | 双向注意力，理解任务 |
-| 60 | [Decoder-Only (GPT)](docs/10-transformer-architecture.md#decoder-only-gpt) | 🔥🔥🔥 | ⭐⭐⭐ | 因果注意力，生成任务，LLM 主流 |
-| 61 | [Encoder-Decoder (T5)](docs/10-transformer-architecture.md#encoder-decoder-t5) | 🔥 | ⭐⭐⭐ | 序列到序列，翻译/摘要 |
-| 62 | [FFN](docs/10-transformer-architecture.md#ffn) | 🔥🔥 | ⭐⭐ | 两层 MLP，中间扩展 4x |
-| 63 | [SwiGLU](docs/10-transformer-architecture.md#swiglu) | 🔥🔥 | ⭐⭐⭐ | 门控 FFN，LLaMA 用 |
+| 59 | [Encoder-Only (BERT)](docs/10-transformer-architecture.md#transformer-概览) | 🔥 | ⭐⭐⭐ | Bidirectional, understanding tasks |
+| 60 | [Decoder-Only (GPT)](docs/10-transformer-architecture.md#gpt-style-decoder-only) | 🔥🔥🔥 | ⭐⭐⭐ | Causal attention, generation, LLM standard |
+| 61 | [Encoder-Decoder (T5)](docs/10-transformer-architecture.md#transformer-概览) | 🔥 | ⭐⭐⭐ | Seq2seq, translation/summarization |
+| 62 | [FFN](docs/10-transformer-architecture.md#feed-forward-network) | 🔥🔥 | ⭐⭐ | 2-layer MLP, 4x expansion |
+| 63 | [SwiGLU](docs/10-transformer-architecture.md#feed-forward-network) | 🔥🔥 | ⭐⭐⭐ | Gated FFN, LLaMA uses |
 
 ---
 
-## 🔥 高频 Top 20
+## 🔥 Hot Top 20
 
-> 由社区投票实时产生，每小时 自动更新
+> Community-driven, updated hourly via GitHub Actions
 >
-> **最后更新**: 2025-03-26 (初始排名，等待社区投票)
+> **Last updated**: 2025-03-26
 
-| 排名 | 题目 | 分类 | 票数 |
+| Rank | Topic | Category | Votes |
 |:---:|:---|:---|:---:|
-| 🥇 | Multi-Head Attention | Attention | 🔥 — |
-| 🥈 | KV Cache | 推理优化 | 🔥 — |
-| 🥉 | RoPE 位置编码 | 位置编码 | 🔥 — |
-| 4 | [PPO](docs/07-reinforcement-learning.md#ppo) | 强化学习 | 🔥 — |
-| 5 | [DPO](docs/07-reinforcement-learning.md#dpo) | 强化学习 | 🔥 — |
-| 6 | [GRPO](docs/07-reinforcement-learning.md#grpo) | 强化学习 | 🔥 — |
-| 7 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | 损失函数 | 🔥 — |
-| 8 | LayerNorm / RMSNorm | 归一化 | 🔥 — |
-| 9 | Adam / AdamW | 优化器 | 🔥 — |
-| 10 | Top-p Sampling | 采样策略 | 🔥 — |
-| 11 | [LoRA](docs/08-efficient-training.md#lora) | 高效训练 | 🔥 — |
-| 12 | GQA / MQA | Attention | 🔥 — |
+| 🥇 | [Multi-Head Attention](docs/01-attention.md#multi-head-attention) | Attention | 🔥 — |
+| 🥈 | [KV Cache](docs/09-inference-optimization.md#kv-cache) | Inference | 🔥 — |
+| 🥉 | [RoPE](docs/03-position-encoding.md#rotary-position-embedding-rope) | Position | 🔥 — |
+| 4 | [PPO](docs/07-reinforcement-learning.md#ppo) | RL | 🔥 — |
+| 5 | [DPO](docs/07-reinforcement-learning.md#dpo) | RL | 🔥 — |
+| 6 | [GRPO](docs/07-reinforcement-learning.md#grpo) | RL | 🔥 — |
+| 7 | [Cross Entropy Loss](docs/05-loss-functions.md#cross-entropy-loss) | Loss | 🔥 — |
+| 8 | [LayerNorm / RMSNorm](docs/02-normalization.md#layer-normalization) | Norm | 🔥 — |
+| 9 | [Adam / AdamW](docs/06-optimizers.md#adam) | Optimizer | 🔥 — |
+| 10 | [Top-p Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | Sampling | 🔥 — |
+| 11 | [LoRA](docs/08-efficient-training.md#lora) | Training | 🔥 — |
+| 12 | [GQA / MQA](docs/01-attention.md#grouped-query-attention-gqa) | Attention | 🔥 — |
 | 13 | [Causal Mask](docs/01-attention.md#causal-mask) | Attention | 🔥 — |
-| 14 | [GAE](docs/07-reinforcement-learning.md#gae) | 强化学习 | 🔥 — |
-| 15 | [Beam Search](docs/04-sampling.md#beam-search) | 采样策略 | 🔥 — |
+| 14 | [GAE](docs/07-reinforcement-learning.md#gae) | RL | 🔥 — |
+| 15 | [Beam Search](docs/04-sampling.md#beam-search) | Sampling | 🔥 — |
 | 16 | [Flash Attention](docs/01-attention.md#flash-attention-原理) | Attention | 🔥 — |
-| 17 | Decoder-Only 架构 | 架构 | 🔥 — |
-| 18 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | 高效训练 | 🔥 — |
-| 19 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | 推理优化 | 🔥 — |
-| 20 | [SwiGLU](docs/10-transformer-architecture.md#swiglu) | 架构 | 🔥 — |
+| 17 | [Decoder-Only](docs/10-transformer-architecture.md#gpt-style-decoder-only) | Arch | 🔥 — |
+| 18 | [Gradient Checkpointing](docs/08-efficient-training.md#gradient-checkpointing) | Training | �� — |
+| 19 | [Speculative Decoding](docs/09-inference-optimization.md#speculative-decoding) | Inference | 🔥 — |
+| 20 | [SwiGLU](docs/10-transformer-architecture.md#feed-forward-network) | Arch | 🔥 — |
 
 ---
 
+## 🗳️ Vote Now
 
-## 🗳️ 参与投票
+**Your interview experience matters!** Help calibrate real interview frequencies.
 
-**你的面试经历很重要！** 帮助社区校准题目的真实热度。
+**👉 [Go to Voting Page](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
 
-**👉 [前往投票页面](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
-
-- 🗳️ 投票给你面试中遇到过的题目
-- 🏆 实时排行榜，社区真实数据
-- 💬 分享你的面试经历和建议
-
----
-
-## 🤝 贡献指南
-
-欢迎贡献新题目、修复错误、改进文档！
-
-1. **Fork** 本仓库
-2. 创建特性分支 `git checkout -b feature/new-topic`
-3. 提交更改 `git commit -m 'Add: XXX'`
-4. 推送分支 `git push origin feature/new-topic`
-5. 提交 **Pull Request**
-
-### 题目格式
-
-```markdown
-## 题目名称
-
-### 🎯 核心思想
-一句话说明
-
-### 📝 实现代码
-带详细注释的代码
-
-### 🔍 复杂度分析
-时间/空间复杂度
-
-### 💡 面试追问
-常见追问和答案
-```
+- 🗳️ Vote for topics you've seen in interviews
+- 🏆 Real-time leaderboard
+- 💬 Share your experience
 
 ---
 
-## 📜 参考资源
+## 🤝 Contributing
+
+Contributions welcome! New topics, bug fixes, documentation improvements.
+
+1. **Fork** this repo
+2. Create feature branch `git checkout -b feature/new-topic`
+3. Commit changes `git commit -m 'Add: XXX'`
+4. Push branch `git push origin feature/new-topic`
+5. Submit **Pull Request**
+
+---
+
+## �� References
 
 - [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
@@ -253,7 +236,7 @@
 
 ## ⭐ Star History
 
-如果这个项目对你有帮助，请给一个 Star ⭐ 支持一下！
+If this helps, please give it a star ⭐!
 
 [![Star History Chart](https://api.star-history.com/svg?repos=cdhx/LLM-Code-Hot-100&type=Date)](https://star-history.com/#cdhx/LLM-Code-Hot-100&Date)
 
@@ -263,10 +246,10 @@
 
 **Made with ❤️ for LLM Interview Preparation**
 
-*LLM 时代的 Hot 100*
+*The Hot 100 for the LLM Era*
 
 **#LLMHot100**
 
-[Report Bug](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [Request Feature](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [参与投票](https://cdhx.github.io/LLM-Code-Hot-100)
+[Report Bug](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [Request Feature](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [Vote Now](https://cdhx.github.io/LLM-Code-Hot-100)
 
 </div>

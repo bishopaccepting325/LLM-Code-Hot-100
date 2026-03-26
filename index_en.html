@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LLM Interview Hot 100 - 大模型面试手撕代码</title>
-    <meta name="description" content="LLM 时代的 Hot 100，大模型面试手撕代码必备题库，社区投票驱动的真实面试热度排行">
+    <meta name="description" content="LLM 时代的 Hot 100，大模型面试手撕代码必备题库，Community Votes驱动的真实面试热度排行">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
@@ -54,31 +54,31 @@
     </style>
 </head>
 <body>
-    <div style="position:fixed;top:10px;right:20px;z-index:100;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:5px 15px;font-size:0.9rem;"><a href="index.html" style="color:#6366f1;text-decoration:none;">中文</a> | <a href="index_en.html" style="color:#64748b;text-decoration:none;">EN</a></div>
+    <div style="position:fixed;top:10px;right:20px;z-index:100;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:5px 15px;font-size:0.9rem;"><a href="index.html" style="color:#6366f1;text-decoration:none;">EN</a> | <a href="index.html" style="color:#6366f1;text-decoration:none;">EN</a></div>
     <section class="hero">
         <div class="logo">🔥</div>
         <h1>LLM Interview Hot 100</h1>
-        <p class="tagline">LLM 时代的 <span class="highlight">Hot 100</span></p>
-        <p style="color: var(--text-muted);">大模型面试手撕代码 · 社区投票驱动 · 实时热度排行</p>
+        <p class="tagline">The <span class="highlight">Hot 100</span> for LLM Era</p>
+        <p style="color: var(--text-muted);">Hand-torn Code for LLM Interviews · Community-Driven · Real-time Rankings</p>
         <div class="cta-buttons">
-            <a href="vote.html" class="btn btn-primary">🗳️ 参与投票</a>
+            <a href="vote.html" class="btn btn-primary">🗳️ Vote Now</a>
             <a href="https://github.com/cdhx/LLM-Code-Hot-100" class="btn btn-secondary">⭐ GitHub</a>
         </div>
         <div class="stats">
-            <div class="stat"><div class="stat-number">63+</div><div class="stat-label">精选题目</div></div>
-            <div class="stat"><div class="stat-number">11</div><div class="stat-label">核心模块</div></div>
-            <div class="stat"><div class="stat-number" id="total-votes">—</div><div class="stat-label">社区投票</div></div>
+            <div class="stat"><div class="stat-number">63+</div><div class="stat-label">Topics</div></div>
+            <div class="stat"><div class="stat-number">11</div><div class="stat-label">Modules</div></div>
+            <div class="stat"><div class="stat-number" id="total-votes">—</div><div class="stat-label">Community Votes</div></div>
         </div>
     </section>
     <section class="categories">
         <div class="container">
-            <h2 class="section-title">📚 题目清单 <span style="font-size:0.6em;color:var(--text-muted);">（按投票数排序）</span></h2>
+            <h2 class="section-title">📚 Topic List <span style="font-size:0.6em;color:var(--text-muted);">(Sorted by Votes)</span></h2>
             <div id="categories-container"><p style="text-align:center;color:var(--text-muted);">加载中...</p></div>
         </div>
     </section>
     <footer>
-        <p><strong>#LLMHot100</strong> - LLM 时代的 Hot 100</p>
-        <p><a href="https://github.com/cdhx/LLM-Code-Hot-100">GitHub</a> · <a href="vote.html">投票</a></p>
+        <p><strong>#LLMHot100</strong> - The Hot 100 for LLM Era</p>
+        <p><a href="https://github.com/cdhx/LLM-Code-Hot-100">GitHub</a> · <a href="vote.html">Vote</a></p>
     </footer>
 <script>
 const SUPABASE_URL='https://qxlhugrwofxnssqggbac.supabase.co';
@@ -174,7 +174,7 @@ function render(){
     document.getElementById('total-votes').textContent=Object.values(votes).reduce((a,b)=>a+b,0)||'—';
     document.getElementById('categories-container').innerHTML=categories.map(cat=>{
         const sorted=[...cat.topics].sort((a,b)=>(votes[b.id]||0)-(votes[a.id]||0));
-        return '<div class="category-section"><div class="category-header"><div class="category-title"><span>'+cat.icon+'</span><span>'+cat.name+'</span></div><div class="category-links"><a href="'+cat.doc+'" target="_blank">📄 查看</a><a href="pdfs/'+cat.doc.split('/')[1].replace('.md','.pdf')+'" target="_blank">📥 PDF</a></div></div><ul class="topic-list">'+sorted.map((t,i)=>{
+        return '<div class="category-section"><div class="category-header"><div class="category-title"><span>'+cat.icon+'</span><span>'+cat.name+'</span></div><div class="category-links"><a href="'+cat.doc+'" target="_blank">📄 View</a><a href="pdfs/'+cat.doc.split('/')[1].replace('.md','.pdf')+'" target="_blank">📥 PDF</a></div></div><ul class="topic-list">'+sorted.map((t,i)=>{
             const v=votes[t.id]||0;const r=i===0?'gold':i===1?'silver':i===2?'bronze':'';
             const badge=v>=10?'<span class="hot-badge hot-3">🔥必考</span>':v>=5?'<span class="hot-badge hot-2">🔥高频</span>':'';
             return '<li class="topic-item"><span class="topic-rank '+r+'">'+(i+1)+'</span><div class="topic-info"><a href="'+cat.doc+t.anchor+'" class="topic-name" target="_blank">'+t.name+'</a>'+badge+'<div class="topic-desc">'+t.desc+'</div></div><div class="topic-votes">'+(v>0?'🔥'+v:'')+'</div></li>';

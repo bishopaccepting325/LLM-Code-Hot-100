@@ -1,98 +1,72 @@
 /**
- * 自动更新 README 中的 Top 20 排行榜
- * 由 GitHub Actions 每天 00:00 运行
+ * Auto-update README Top 20 ranking
+ * Runs hourly via GitHub Actions
  */
 
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
 
-// 题目映射表
+// Topic ID to metadata mapping (matching index.html IDs)
 const topicMeta = {
-  // LLM 基础
-  'gradient': { name: '梯度与反向传播', category: 'LLM基础' },
-  'linear-reg': { name: '线性回归', category: 'LLM基础' },
-  'logistic-reg': { name: '逻辑回归', category: 'LLM基础' },
-  'softmax-reg': { name: 'Softmax 回归', category: 'LLM基础' },
-  'mlp': { name: 'MLP 多层感知机', category: 'LLM基础' },
-  'activations': { name: '激活函数', category: 'LLM基础' },
+  // LLM Basics
+  'gradient': { name: 'Gradient & Backprop', nameCN: '梯度与反向传播', category: 'Basics', link: 'docs/00-llm-basics.md#梯度与反向传播' },
+  'linear-reg': { name: 'Linear Regression', nameCN: '线性回归', category: 'Basics', link: 'docs/00-llm-basics.md#线性回归' },
+  'logistic-reg': { name: 'Logistic Regression', nameCN: '逻辑回归', category: 'Basics', link: 'docs/00-llm-basics.md#逻辑回归' },
+  'mlp': { name: 'MLP', nameCN: 'MLP 多层感知机', category: 'Basics', link: 'docs/00-llm-basics.md#mlp-多层感知机' },
+  'activations': { name: 'Activations', nameCN: '激活函数', category: 'Basics', link: 'docs/00-llm-basics.md#激活函数' },
   
   // Attention
-  'sdpa': { name: 'Scaled Dot-Product Attention', category: 'Attention' },
-  'mha': { name: 'Multi-Head Attention', category: 'Attention' },
-  'causal-mask': { name: 'Causal Mask', category: 'Attention' },
-  'gqa': { name: 'Grouped Query Attention', category: 'Attention' },
-  'mqa': { name: 'Multi-Query Attention', category: 'Attention' },
-  'flash-attn': { name: 'Flash Attention', category: 'Attention' },
-  'kv-cache': { name: 'KV Cache', category: 'Attention' },
-  'cross-attn': { name: 'Cross Attention', category: 'Attention' },
+  'sdpa': { name: 'Scaled Dot-Product Attention', nameCN: 'Scaled Dot-Product Attention', category: 'Attention', link: 'docs/01-attention.md#scaled-dot-product-attention' },
+  'mha': { name: 'Multi-Head Attention', nameCN: 'Multi-Head Attention', category: 'Attention', link: 'docs/01-attention.md#multi-head-attention' },
+  'causal-mask': { name: 'Causal Mask', nameCN: 'Causal Mask', category: 'Attention', link: 'docs/01-attention.md#causal-mask' },
+  'gqa': { name: 'GQA', nameCN: 'Grouped Query Attention', category: 'Attention', link: 'docs/01-attention.md#grouped-query-attention-gqa' },
+  'mqa': { name: 'MQA', nameCN: 'Multi-Query Attention', category: 'Attention', link: 'docs/01-attention.md#multi-query-attention-mqa' },
+  'flash-attn': { name: 'Flash Attention', nameCN: 'Flash Attention', category: 'Attention', link: 'docs/01-attention.md#flash-attention-原理' },
+  'kv-cache-attn': { name: 'KV Cache', nameCN: 'KV Cache', category: 'Attention', link: 'docs/01-attention.md#kv-cache' },
   
-  // 归一化
-  'layernorm': { name: 'Layer Normalization', category: '归一化' },
-  'rmsnorm': { name: 'RMS Normalization', category: '归一化' },
-  'batchnorm': { name: 'Batch Normalization', category: '归一化' },
-  'pre-post-norm': { name: 'Pre-Norm vs Post-Norm', category: '归一化' },
+  // Normalization
+  'layernorm': { name: 'LayerNorm', nameCN: 'Layer Normalization', category: 'Norm', link: 'docs/02-normalization.md#layer-normalization' },
+  'rmsnorm': { name: 'RMSNorm', nameCN: 'RMS Normalization', category: 'Norm', link: 'docs/02-normalization.md#rms-normalization' },
   
-  // 位置编码
-  'sinusoidal': { name: 'Sinusoidal PE', category: '位置编码' },
-  'learnable-pe': { name: 'Learnable PE', category: '位置编码' },
-  'rope': { name: 'RoPE 旋转位置编码', category: '位置编码' },
-  'alibi': { name: 'ALiBi', category: '位置编码' },
+  // Position Encoding
+  'rope': { name: 'RoPE', nameCN: 'RoPE 旋转位置编码', category: 'Position', link: 'docs/03-position-encoding.md#rotary-position-embedding-rope' },
+  'alibi': { name: 'ALiBi', nameCN: 'ALiBi', category: 'Position', link: 'docs/03-position-encoding.md#alibi' },
   
-  // 采样
-  'greedy': { name: 'Greedy Decoding', category: '采样策略' },
-  'temperature': { name: 'Temperature Sampling', category: '采样策略' },
-  'topk': { name: 'Top-k Sampling', category: '采样策略' },
-  'topp': { name: 'Top-p Sampling', category: '采样策略' },
-  'beam': { name: 'Beam Search', category: '采样策略' },
+  // Sampling
+  'temperature': { name: 'Temperature', nameCN: 'Temperature Sampling', category: 'Sampling', link: 'docs/04-sampling.md#temperature-sampling' },
+  'topk': { name: 'Top-k', nameCN: 'Top-k Sampling', category: 'Sampling', link: 'docs/04-sampling.md#top-k-sampling' },
+  'topp': { name: 'Top-p', nameCN: 'Top-p Sampling', category: 'Sampling', link: 'docs/04-sampling.md#top-p-nucleus-sampling' },
+  'beam': { name: 'Beam Search', nameCN: 'Beam Search', category: 'Sampling', link: 'docs/04-sampling.md#beam-search' },
   
-  // 损失函数
-  'ce': { name: 'Cross Entropy Loss', category: '损失函数' },
-  'lm-loss': { name: 'Language Model Loss', category: '损失函数' },
-  'kl': { name: 'KL Divergence', category: '损失函数' },
-  'mse': { name: 'MSE Loss', category: '损失函数' },
-  'focal': { name: 'Focal Loss', category: '损失函数' },
-  'sft-loss': { name: 'SFT Loss', category: '损失函数' },
-  'rm-loss': { name: 'Reward Model Loss', category: '损失函数' },
-  'contrastive': { name: 'Contrastive Loss', category: '损失函数' },
+  // Loss
+  'ce-loss': { name: 'Cross Entropy', nameCN: 'Cross Entropy Loss', category: 'Loss', link: 'docs/05-loss-functions.md#cross-entropy-loss' },
+  'kl-div': { name: 'KL Divergence', nameCN: 'KL Divergence', category: 'Loss', link: 'docs/05-loss-functions.md#kl-divergence' },
+  'sft-loss': { name: 'SFT Loss', nameCN: 'SFT Loss', category: 'Loss', link: 'docs/05-loss-functions.md#sft-loss' },
+  'rm-loss': { name: 'Reward Model Loss', nameCN: 'Reward Model Loss', category: 'Loss', link: 'docs/05-loss-functions.md#reward-model-loss' },
   
-  // 优化器
-  'sgd': { name: 'SGD', category: '优化器' },
-  'momentum': { name: 'SGD + Momentum', category: '优化器' },
-  'adam': { name: 'Adam', category: '优化器' },
-  'adamw': { name: 'AdamW', category: '优化器' },
-  'lr-schedule': { name: '学习率调度', category: '优化器' },
+  // Optimizers
+  'adam': { name: 'Adam', nameCN: 'Adam', category: 'Optimizer', link: 'docs/06-optimizers.md#adam' },
+  'adamw': { name: 'AdamW', nameCN: 'AdamW', category: 'Optimizer', link: 'docs/06-optimizers.md#adamw' },
   
-  // 强化学习
-  'reinforce': { name: 'REINFORCE', category: '强化学习' },
-  'gae': { name: 'GAE', category: '强化学习' },
-  'ppo': { name: 'PPO', category: '强化学习' },
-  'ppo-clip': { name: 'PPO-Clip', category: '强化学习' },
-  'dpo': { name: 'DPO', category: '强化学习' },
-  'grpo': { name: 'GRPO', category: '强化学习' },
-  'kl-penalty': { name: 'KL 惩罚', category: '强化学习' },
-  'reward-shaping': { name: 'Reward Shaping', category: '强化学习' },
+  // RL
+  'gae': { name: 'GAE', nameCN: 'GAE', category: 'RL', link: 'docs/07-reinforcement-learning.md#gae' },
+  'ppo': { name: 'PPO', nameCN: 'PPO', category: 'RL', link: 'docs/07-reinforcement-learning.md#ppo' },
+  'dpo': { name: 'DPO', nameCN: 'DPO', category: 'RL', link: 'docs/07-reinforcement-learning.md#dpo' },
+  'grpo': { name: 'GRPO', nameCN: 'GRPO', category: 'RL', link: 'docs/07-reinforcement-learning.md#grpo' },
   
-  // 高效训练
-  'lora': { name: 'LoRA', category: '高效训练' },
-  'qlora': { name: 'QLoRA', category: '高效训练' },
-  'grad-ckpt': { name: 'Gradient Checkpointing', category: '高效训练' },
-  'mixed-precision': { name: 'Mixed Precision', category: '高效训练' },
-  'grad-accum': { name: 'Gradient Accumulation', category: '高效训练' },
+  // Efficient Training
+  'lora': { name: 'LoRA', nameCN: 'LoRA', category: 'Training', link: 'docs/08-efficient-training.md#lora' },
+  'grad-ckpt': { name: 'Gradient Checkpointing', nameCN: 'Gradient Checkpointing', category: 'Training', link: 'docs/08-efficient-training.md#gradient-checkpointing' },
   
-  // 推理优化
-  'kv-cache-infer': { name: 'KV Cache', category: '推理优化' },
-  'paged-attn': { name: 'Paged Attention', category: '推理优化' },
-  'spec-decode': { name: 'Speculative Decoding', category: '推理优化' },
-  'cont-batch': { name: 'Continuous Batching', category: '推理优化' },
-  'quantization': { name: 'Quantization', category: '推理优化' },
+  // Inference
+  'kv-cache': { name: 'KV Cache', nameCN: 'KV Cache', category: 'Inference', link: 'docs/09-inference-optimization.md#kv-cache' },
+  'spec-decode': { name: 'Speculative Decoding', nameCN: 'Speculative Decoding', category: 'Inference', link: 'docs/09-inference-optimization.md#speculative-decoding' },
   
-  // 架构
-  'encoder-only': { name: 'Encoder-Only (BERT)', category: '架构' },
-  'decoder-only': { name: 'Decoder-Only (GPT)', category: '架构' },
-  'enc-dec': { name: 'Encoder-Decoder (T5)', category: '架构' },
-  'ffn': { name: 'FFN', category: '架构' },
-  'swiglu': { name: 'SwiGLU', category: '架构' },
+  // Architecture
+  'decoder-only': { name: 'Decoder-Only', nameCN: 'Decoder-Only (GPT)', category: 'Arch', link: 'docs/10-transformer-architecture.md#gpt-style-decoder-only' },
+  'ffn': { name: 'FFN', nameCN: 'FFN', category: 'Arch', link: 'docs/10-transformer-architecture.md#feed-forward-network' },
+  'swiglu': { name: 'SwiGLU', nameCN: 'SwiGLU', category: 'Arch', link: 'docs/10-transformer-architecture.md#feed-forward-network' },
 };
 
 async function main() {
@@ -100,74 +74,95 @@ async function main() {
   const supabaseKey = process.env.SUPABASE_KEY;
   
   if (!supabaseUrl || !supabaseKey) {
-    console.log('⚠️ Supabase 未配置，使用默认排名');
+    console.log('⚠️ Supabase not configured, skipping');
     return;
   }
   
   const supabase = createClient(supabaseUrl, supabaseKey);
   
-  // 获取投票数据
-  console.log('📊 获取投票数据...');
-  const { data: votes, error } = await supabase
-    .from('votes')
-    .select('topic_id');
+  console.log('📊 Fetching votes...');
+  const { data: votes, error } = await supabase.from('votes').select('topic_id');
   
   if (error) {
-    console.error('❌ 获取数据失败:', error);
+    console.error('❌ Failed:', error);
     return;
   }
   
-  // 统计票数
+  // Count votes
   const voteCounts = {};
   votes.forEach(v => {
     voteCounts[v.topic_id] = (voteCounts[v.topic_id] || 0) + 1;
   });
   
-  // 排序获取 Top 20
+  // Sort and get Top 20
   const sorted = Object.entries(voteCounts)
     .map(([id, count]) => ({
-      id,
-      count,
-      ...(topicMeta[id] || { name: id, category: '未知' })
+      id, count,
+      ...(topicMeta[id] || { name: id, nameCN: id, category: 'Other', link: '' })
     }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 20);
   
   console.log('🏆 Top 20:');
-  sorted.forEach((t, i) => {
-    console.log(`  ${i + 1}. ${t.name} (${t.count} votes)`);
-  });
+  sorted.forEach((t, i) => console.log(`  ${i + 1}. ${t.name} (${t.count} votes)`));
   
-  // 生成表格
   const rankEmoji = ['🥇', '🥈', '🥉'];
-  const tableRows = sorted.map((t, i) => {
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Generate English table
+  const tableRowsEN = sorted.map((t, i) => {
     const rank = i < 3 ? rankEmoji[i] : (i + 1).toString();
-    return `| ${rank} | ${t.name} | ${t.category} | 🔥 ${t.count} |`;
+    const nameLink = t.link ? `[${t.name}](${t.link})` : t.name;
+    return `| ${rank} | ${nameLink} | ${t.category} | 🔥 ${t.count} |`;
   }).join('\n');
   
-  const newTable = `## 🔥 高频 Top 20
+  const newTableEN = `## 🔥 Hot Top 20
 
-> 由社区投票实时产生，每日 00:00 自动更新
+> Community-driven, updated hourly via GitHub Actions
 >
-> **最后更新**: ${new Date().toISOString().split('T')[0]}
+> **Last updated**: ${today}
+
+| Rank | Topic | Category | Votes |
+|:---:|:---|:---|:---:|
+${tableRowsEN}`;
+
+  // Generate Chinese table
+  const tableRowsCN = sorted.map((t, i) => {
+    const rank = i < 3 ? rankEmoji[i] : (i + 1).toString();
+    const nameLink = t.link ? `[${t.nameCN}](${t.link})` : t.nameCN;
+    return `| ${rank} | ${nameLink} | ${t.category} | 🔥 ${t.count} |`;
+  }).join('\n');
+  
+  const newTableCN = `## 🔥 高频 Top 20
+
+> 由社区投票驱动，每小时自动更新
+>
+> **最后更新**: ${today}
 
 | 排名 | 题目 | 分类 | 票数 |
 |:---:|:---|:---|:---:|
-${tableRows}`;
+${tableRowsCN}`;
 
-  // 读取 README
-  const readmePath = path.join(__dirname, '..', 'README.md');
-  let readme = fs.readFileSync(readmePath, 'utf-8');
+  // Update English README
+  const readmeEN = 'README.md';
+  let contentEN = fs.readFileSync(readmeEN, 'utf-8');
+  const regexEN = /## 🔥 Hot Top 20[\s\S]*?(?=\n---\n)/;
+  if (regexEN.test(contentEN)) {
+    contentEN = contentEN.replace(regexEN, newTableEN + '\n');
+    fs.writeFileSync(readmeEN, contentEN);
+    console.log('✅ README.md updated');
+  }
   
-  // 替换 Top 20 部分
-  const top20Regex = /## 🔥 高频 Top 20[\s\S]*?(?=\n---\n)/;
-  
-  if (top20Regex.test(readme)) {
-    readme = readme.replace(top20Regex, newTable + '\n');
-    fs.writeFileSync(readmePath, readme);
-    console.log('✅ README 已更新');
-  } else {
-    console.log('⚠️ 未找到 Top 20 部分，跳过更新');
+  // Update Chinese README
+  const readmeCN = 'README_zh.md';
+  if (fs.existsSync(readmeCN)) {
+    let contentCN = fs.readFileSync(readmeCN, 'utf-8');
+    const regexCN = /## 🔥 高频 Top 20[\s\S]*?(?=\n---\n)/;
+    if (regexCN.test(contentCN)) {
+      contentCN = contentCN.replace(regexCN, newTableCN + '\n');
+      fs.writeFileSync(readmeCN, contentCN);
+      console.log('✅ README_zh.md updated');
+    }
   }
 }
 

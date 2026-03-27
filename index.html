@@ -84,6 +84,7 @@
 const SUPABASE_URL='https://qxlhugrwofxnssqggbac.supabase.co';
 const SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4bGh1Z3J3b2Z4bnNzcWdnYmFjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0Nzg4OTYsImV4cCI6MjA5MDA1NDg5Nn0.Y0SaWTANFQkd-V6JP_8i_7Mk0JIEWV4FeZmGUxot9qQ';
 let supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+const GITHUB_BASE='https://github.com/cdhx/LLM-Code-Hot-100/blob/main/';
 const categories=[
 {name:'LLM 基础',icon:'📖',doc:'docs/00-llm-basics.md',topics:[
 {id:'gradient',name:'梯度与反向传播',anchor:'#梯度与反向传播',desc:'链式法则手推，深度学习根基'},
@@ -177,7 +178,7 @@ function render(){
         return '<div class="category-section"><div class="category-header"><div class="category-title"><span>'+cat.icon+'</span><span>'+cat.name+'</span></div><div class="category-links"><a href="'+cat.doc+'" target="_blank">📄 查看</a><a href="pdfs/'+cat.doc.split('/')[1].replace('.md','.pdf')+'" target="_blank">📥 PDF</a></div></div><ul class="topic-list">'+sorted.map((t,i)=>{
             const v=votes[t.id]||0;const r=i===0?'gold':i===1?'silver':i===2?'bronze':'';
             const badge=v>=10?'<span class="hot-badge hot-3">🔥必考</span>':v>=5?'<span class="hot-badge hot-2">🔥高频</span>':'';
-            return '<li class="topic-item"><span class="topic-rank '+r+'">'+(i+1)+'</span><div class="topic-info"><a href="'+cat.doc+t.anchor+'" class="topic-name" target="_blank">'+t.name+'</a>'+badge+'<div class="topic-desc">'+t.desc+'</div></div><div class="topic-votes">'+(v>0?'🔥'+v:'')+'</div></li>';
+            return '<li class="topic-item"><span class="topic-rank '+r+'">'+(i+1)+'</span><div class="topic-info"><a href="'+GITHUB_BASE+cat.doc+t.anchor+'" class="topic-name" target="_blank">'+t.name+'</a>'+badge+'<div class="topic-desc">'+t.desc+'</div></div><div class="topic-votes">'+(v>0?'🔥'+v:'')+'</div></li>';
         }).join('')+'</ul></div>';
     }).join('');
 }

@@ -49,7 +49,7 @@
 >
 > **👉 [Vote Now](https://cdhx.github.io/LLM-Code-Hot-100)** to help calibrate the real interview frequency!
 
-### 📖 LLM Basics → [View](docs/00-llm-basics.md) · [PDF](pdfs/00-llm-basics.pdf)
+### 📖 LLM Basics → [View](docs/00-llm-basics.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -60,7 +60,7 @@
 | 5 | [MLP](docs/00-llm-basics.md#mlp-多层感知机) | 🔥🔥 | ⭐⭐ | Universal approximator, FFN basis |
 | 6 | [Activation Functions](docs/00-llm-basics.md#激活函数) | 🔥🔥 | ⭐ | ReLU/GELU/SiLU and gradients |
 
-### 🧠 Attention Mechanisms → [View](docs/01-attention.md) · [PDF](pdfs/01-attention.pdf)
+### 🧠 Attention Mechanisms → [View](docs/01-attention.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -73,7 +73,7 @@
 | 13 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Cache historical KV, avoid recomputation |
 | 14 | [Cross Attention](docs/01-attention.md#multi-head-attention) | 🔥 | ⭐⭐⭐ | Q from decoder, KV from encoder |
 
-### 📏 Normalization → [View](docs/02-normalization.md) · [PDF](pdfs/02-normalization.pdf)
+### 📏 Normalization → [View](docs/02-normalization.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -82,7 +82,7 @@
 | 17 | [Batch Normalization](docs/02-normalization.md#batch-normalization) | 🔥 | ⭐⭐ | Normalize across batch, CNN common |
 | 18 | [Pre-Norm vs Post-Norm](docs/02-normalization.md#pre-norm-vs-post-norm) | 🔥🔥 | ⭐ | Pre-Norm more stable, modern LLM standard |
 
-### 📍 Position Encoding → [View](docs/03-position-encoding.md) · [PDF](pdfs/03-position-encoding.pdf)
+### 📍 Position Encoding → [View](docs/03-position-encoding.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -91,7 +91,7 @@
 | 21 | [RoPE](docs/03-position-encoding.md#rotary-position-embedding-rope) | 🔥🔥🔥 | ⭐⭐⭐⭐ | Complex rotation, relative position, LLM standard |
 | 22 | [ALiBi](docs/03-position-encoding.md#alibi) | 🔥🔥 | ⭐⭐⭐ | Linear bias in attention, good extrapolation |
 
-### 🎲 Sampling Strategies → [View](docs/04-sampling.md) · [PDF](pdfs/04-sampling.pdf)
+### 🎲 Sampling Strategies → [View](docs/04-sampling.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -101,7 +101,7 @@
 | 26 | [Top-p Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | 🔥🔥🔥 | ⭐⭐⭐ | Cumulative probability cutoff |
 | 27 | [Beam Search](docs/04-sampling.md#beam-search) | 🔥🔥 | ⭐⭐⭐ | Keep k best sequences |
 
-### 📉 Loss Functions → [View](docs/05-loss-functions.md) · [PDF](pdfs/05-loss-functions.pdf)
+### 📉 Loss Functions → [View](docs/05-loss-functions.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -114,7 +114,7 @@
 | 34 | [Reward Model Loss](docs/05-loss-functions.md#reward-model-loss) | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`, preference learning |
 | 35 | [Contrastive Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥 | ⭐⭐⭐ | Pull positives, push negatives |
 
-### ⚡ Optimizers → [View](docs/06-optimizers.md) · [PDF](pdfs/06-optimizers.pdf)
+### ⚡ Optimizers → [View](docs/06-optimizers.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -124,7 +124,7 @@
 | 39 | [AdamW](docs/06-optimizers.md#adamw) | 🔥🔥🔥 | ⭐⭐⭐ | Decoupled weight decay, LLM standard |
 | 40 | [LR Schedule](docs/06-optimizers.md#learning-rate-scheduler) | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
 
-### 🎮 Reinforcement Learning (RLHF) → [View](docs/07-reinforcement-learning.md) · [PDF](pdfs/07-reinforcement-learning.pdf)
+### 🎮 Reinforcement Learning (RLHF) → [View](docs/07-reinforcement-learning.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -137,7 +137,7 @@
 | 47 | [KL Penalty](docs/07-reinforcement-learning.md#ppo) | 🔥🔥 | ⭐⭐ | Prevent diverging from reference |
 | 48 | [Reward Shaping](docs/07-reinforcement-learning.md#ppo) | 🔥 | ⭐⭐⭐ | Reward engineering, sparse → dense |
 
-### 🚀 Efficient Training → [View](docs/08-efficient-training.md) · [PDF](pdfs/08-efficient-training.pdf)
+### 🚀 Efficient Training → [View](docs/08-efficient-training.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -147,7 +147,7 @@
 | 52 | [Mixed Precision](docs/08-efficient-training.md#mixed-precision-training) | 🔥🔥 | ⭐⭐⭐ | FP16/BF16, less memory, faster |
 | 53 | [Gradient Accumulation](docs/08-efficient-training.md#gradient-accumulation) | 🔥🔥 | ⭐⭐ | Small batch simulates large batch |
 
-### ⚡ Inference Optimization → [View](docs/09-inference-optimization.md) · [PDF](pdfs/09-inference-optimization.pdf)
+### ⚡ Inference Optimization → [View](docs/09-inference-optimization.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|
@@ -157,7 +157,7 @@
 | 57 | [Continuous Batching](docs/09-inference-optimization.md#continuous-batching) | 🔥🔥 | ⭐⭐⭐ | Dynamic batching, higher throughput |
 | 58 | [Quantization](docs/09-inference-optimization.md#kv-cache) | 🔥🔥 | ⭐⭐⭐ | INT8/INT4, half+ memory |
 
-### 🏗️ Transformer Architecture → [View](docs/10-transformer-architecture.md) · [PDF](pdfs/10-transformer-architecture.pdf)
+### 🏗️ Transformer Architecture → [View](docs/10-transformer-architecture.md)
 
 | # | Topic | Hot | Difficulty | One-liner |
 |:---:|:---|:---:|:---:|:---|

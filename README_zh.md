@@ -47,7 +47,7 @@
 >
 > **👉 [参与投票](https://cdhx.github.io/LLM-Code-Hot-100)**，用你的面试经历帮助社区校准 Hot 程度！
 
-### 📖 LLM 基础 → [查看](docs/00-llm-basics.md) · [PDF](pdfs/00-llm-basics.pdf)
+### 📖 LLM 基础 → [查看](docs/00-llm-basics.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -58,7 +58,7 @@
 | 5 | [MLP 多层感知机](docs/00-llm-basics.md#mlp-多层感知机) | 🔥🔥 | ⭐⭐ | 万能近似器，FFN 的基础 |
 | 6 | [激活函数](docs/00-llm-basics.md#激活函数) | 🔥🔥 | ⭐ | ReLU/GELU/SiLU 及其梯度 |
 
-### 🧠 Attention 机制 → [查看](docs/01-attention.md) · [PDF](pdfs/01-attention.pdf)
+### 🧠 Attention 机制 → [查看](docs/01-attention.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -71,7 +71,7 @@
 | 13 | [KV Cache](docs/01-attention.md#kv-cache) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 缓存历史 KV，避免重复计算 |
 | 14 | [Cross Attention](docs/01-attention.md#multi-head-attention) | 🔥 | ⭐⭐⭐ | Q 来自 decoder，KV 来自 encoder |
 
-### 📏 归一化层 → [查看](docs/02-normalization.md) · [PDF](pdfs/02-normalization.pdf)
+### 📏 归一化层 → [查看](docs/02-normalization.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -80,7 +80,7 @@
 | 17 | [Batch Normalization](docs/02-normalization.md#batch-normalization) | 🔥 | ⭐⭐ | 沿 batch 维度归一化，CNN 常用 |
 | 18 | [Pre-Norm vs Post-Norm](docs/02-normalization.md#pre-norm-vs-post-norm) | 🔥🔥 | ⭐ | Pre-Norm 训练稳定，现代 LLM 主流 |
 
-### 📍 位置编码 → [查看](docs/03-position-encoding.md) · [PDF](pdfs/03-position-encoding.pdf)
+### 📍 位置编码 → [查看](docs/03-position-encoding.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -89,7 +89,7 @@
 | 21 | [RoPE 旋转位置编码](docs/03-position-encoding.md#rotary-position-embedding-rope) | 🔥🔥🔥 | ⭐⭐⭐⭐ | 复数旋转，相对位置，LLM 主流 |
 | 22 | [ALiBi](docs/03-position-encoding.md#alibi) | 🔥🔥 | ⭐⭐⭐ | attention 加线性偏置，长度外推好 |
 
-### 🎲 采样策略 → [查看](docs/04-sampling.md) · [PDF](pdfs/04-sampling.pdf)
+### 🎲 采样策略 → [查看](docs/04-sampling.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -99,7 +99,7 @@
 | 26 | [Top-p (Nucleus) Sampling](docs/04-sampling.md#top-p-nucleus-sampling) | 🔥🔥🔥 | ⭐⭐⭐ | 累积概率达到 p 后截断 |
 | 27 | [Beam Search](docs/04-sampling.md#beam-search) | 🔥🔥 | ⭐⭐⭐ | 保留 k 个最优序列 |
 
-### 📉 损失函数 → [查看](docs/05-loss-functions.md) · [PDF](pdfs/05-loss-functions.pdf)
+### 📉 损失函数 → [查看](docs/05-loss-functions.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -112,7 +112,7 @@
 | 34 | [Reward Model Loss](docs/05-loss-functions.md#reward-model-loss) | 🔥🔥 | ⭐⭐⭐ | `-log σ(r_w - r_l)`，偏好学习 |
 | 35 | [Contrastive Loss](docs/05-loss-functions.md#cross-entropy-loss) | 🔥 | ⭐⭐⭐ | 正样本近，负样本远 |
 
-### ⚡ 优化器 → [查看](docs/06-optimizers.md) · [PDF](pdfs/06-optimizers.pdf)
+### ⚡ 优化器 → [查看](docs/06-optimizers.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -122,7 +122,7 @@
 | 39 | [AdamW](docs/06-optimizers.md#adamw) | 🔥🔥🔥 | ⭐⭐⭐ | 解耦权重衰减，LLM 标配 |
 | 40 | [学习率调度](docs/06-optimizers.md#learning-rate-scheduler) | 🔥🔥 | ⭐⭐ | Warmup + Cosine/Linear decay |
 
-### 🎮 强化学习 (RLHF) → [查看](docs/07-reinforcement-learning.md) · [PDF](pdfs/07-reinforcement-learning.pdf)
+### 🎮 强化学习 (RLHF) → [查看](docs/07-reinforcement-learning.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -135,7 +135,7 @@
 | 47 | [KL 惩罚](docs/07-reinforcement-learning.md#ppo) | 🔥🔥 | ⭐⭐ | 防止偏离参考策略太远 |
 | 48 | [Reward Shaping](docs/07-reinforcement-learning.md#ppo) | 🔥 | ⭐⭐⭐ | 奖励工程，稀疏 → 稠密 |
 
-### 🚀 高效训练 → [查看](docs/08-efficient-training.md) · [PDF](pdfs/08-efficient-training.pdf)
+### 🚀 高效训练 → [查看](docs/08-efficient-training.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -145,7 +145,7 @@
 | 52 | [Mixed Precision (FP16/BF16)](docs/08-efficient-training.md#mixed-precision-training) | 🔥🔥 | ⭐⭐⭐ | 降低显存，加速计算 |
 | 53 | [Gradient Accumulation](docs/08-efficient-training.md#gradient-accumulation) | 🔥🔥 | ⭐⭐ | 小 batch 模拟大 batch |
 
-### ⚡ 推理优化 → [查看](docs/09-inference-optimization.md) · [PDF](pdfs/09-inference-optimization.pdf)
+### ⚡ 推理优化 → [查看](docs/09-inference-optimization.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|
@@ -155,7 +155,7 @@
 | 57 | [Continuous Batching](docs/09-inference-optimization.md#continuous-batching) | 🔥🔥 | ⭐⭐⭐ | 动态 batch，提高吞吐 |
 | 58 | [Quantization (INT8/INT4)](docs/09-inference-optimization.md#kv-cache) | 🔥🔥 | ⭐⭐⭐ | 量化推理，显存减半+ |
 
-### 🏗️ Transformer 架构 → [查看](docs/10-transformer-architecture.md) · [PDF](pdfs/10-transformer-architecture.pdf)
+### 🏗️ Transformer 架构 → [查看](docs/10-transformer-architecture.md)
 
 | # | 题目 | Hot | 难度 | 一句话 |
 |:---:|:---|:---:|:---:|:---|

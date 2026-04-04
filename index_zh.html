@@ -173,7 +173,7 @@ function render(){
     document.getElementById('total-votes').textContent=Object.values(votes).reduce((a,b)=>a+b,0)||'—';
     document.getElementById('categories-container').innerHTML=categories.map(cat=>{
         const sorted=[...cat.topics].sort((a,b)=>(votes[b.id]||0)-(votes[a.id]||0));
-        return '<div class="category-section"><div class="category-header"><div class="category-title"><span>'+cat.icon+'</span><span>'+cat.name+'</span></div><div class="category-links"><a href="'+cat.doc+'" target="_blank">📄 查看</a><a href="pdfs/'+cat.doc.split('/')[1].replace('.md','.pdf')+'" target="_blank">📥 PDF</a></div></div><ul class="topic-list">'+sorted.map((t,i)=>{
+        return '<div class="category-section"><div class="category-header"><div class="category-title"><span>'+cat.icon+'</span><span>'+cat.name+'</span></div><div class="category-links"><a href="'+cat.doc+'" target="_blank">📄 查看</a></div></div><ul class="topic-list">'+sorted.map((t,i)=>{
             const v=votes[t.id]||0;const r=i===0?'gold':i===1?'silver':i===2?'bronze':'';
             const badge=v>=10?'<span class="hot-badge hot-3">🔥必考</span>':v>=5?'<span class="hot-badge hot-2">🔥高频</span>':'';
             return '<li class="topic-item"><span class="topic-rank '+r+'">'+(i+1)+'</span><div class="topic-info"><a href="'+cat.doc+t.anchor+'" class="topic-name" target="_blank">'+t.name+'</a>'+badge+'<div class="topic-desc">'+t.desc+'</div></div><div class="topic-votes">'+(v>0?'🔥'+v:'')+'</div></li>';

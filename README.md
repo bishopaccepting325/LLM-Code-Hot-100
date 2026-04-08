@@ -173,7 +173,7 @@
 
 > Community-driven, updated hourly via GitHub Actions
 >
-> **Last updated**: 2026-04-07
+> **Last updated**: 2026-04-08
 
 | Rank | Topic | Category | Votes |
 |:---:|:---|:---|:---:|

